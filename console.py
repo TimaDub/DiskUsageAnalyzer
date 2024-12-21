@@ -191,7 +191,7 @@ class Main:
             self.info["exts"].items(), key=lambda x: x[1][0], default=None
         )
 
-        self.console.print(f"[red]\n# Результати аналізу ↓")
+        self.console.print("[red]\n# Результати аналізу ↓")
         self.console.print(f"[green]--> Директорія аналізу: {self.directory}")
         self.console.print(f'[green]--> Кількість файлів: {self.info["total-sum"]}')
         self.console.print(
@@ -199,19 +199,19 @@ class Main:
         )
 
         if largest_by_size:
-            self.console.print(f"# Найбільша директорія за вагою ↓")
+            self.console.print("# Найбільша директорія за вагою ↓")
             self.console.print(
                 f"[blue]--> Директорія: {largest_by_size[0]}, Вага: {largest_by_size[1][1] / (1e+9):.6f} GB\n"
             )
 
         if largest_by_count:
-            self.console.print(f"# Найбільша директорія за кількістю файлів ↓")
+            self.console.print("# Найбільша директорія за кількістю файлів ↓")
             self.console.print(
                 f"[blue]--> Директорія: {largest_by_count[0]}, Кількість файлів: {largest_by_count[1][0]}\n"
             )
 
         if most_frequent_extension:
-            self.console.print(f"# Найчастіше розширення ↓")
+            self.console.print("# Найчастіше розширення ↓")
             self.console.print(
                 f"[blue]--> Розширення: {most_frequent_extension[0]}, Кількість файлів: {most_frequent_extension[1][0]}"
             )
