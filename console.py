@@ -118,7 +118,11 @@ class Main:
                 "[green]Введіть шлях в директорії '/шлях у папці' (Enter для кореневої директорії): ",
                 end="",
             )
-            self.directory += input("")
+            dir = input("") or None
+            if dir is None:
+                self.directory = self.start_dir
+            else:
+                self.directory += dir
             os.chdir(self.directory)
             self.info = self.infos.get_info(
                 directory=self.directory,
@@ -133,10 +137,7 @@ class Main:
             )
 
             self.directory = input("") or self.directory
-            if self.directory is None:
-                self.directory = self.start_dir
             self.start_dir = self.directory
-
             self.info = self.infos.get_info(
                 directory=self.directory,
                 extensions=self.extensions,
