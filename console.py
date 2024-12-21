@@ -59,19 +59,19 @@ class Main:
                     self.mode_5(self.d_bars)
                 case 6:
                     self.mode_3(self.d_bars)
-                    os.system("pause")
+                    self.wait()
                     self.mode_4(self.d_bars)
-                    os.system("pause")
+                    self.wait()
                     self.mode_5(self.d_bars)
                 case 7:
                     self.mode_1()
-                    os.system("pause")
+                    self.wait()
                     self.mode_2()
-                    os.system("pause")
+                    self.wait()
                     self.mode_3(self.d_bars)
-                    os.system("pause")
+                    self.wait()
                     self.mode_4(self.d_bars)
-                    os.system("pause")
+                    self.wait()
                     self.mode_5(self.d_bars)
                 case 8:
                     self.enter_path(part=True)
@@ -94,8 +94,15 @@ class Main:
                     break
             #
             print()
-            os.system("pause")
+            self.wait()
             self.clear()
+
+    def wait(self):
+        if self.platform == "windows":
+            os.system("pause")
+        else:
+            self.console.print("Натисніть Ентер щоб продовжити ", end="")
+            input(":")
 
     def clear(self):
         if self.platform == "windows":
