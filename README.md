@@ -59,3 +59,9 @@ This project is currently **unfinished**, but it works in the console to demonst
 ---
 🌟 **Enjoy using DiskUsageAnalyzer!** 🌟
 
+# 📺 Video on Youtube 
+__https://www.youtube.com/watch?v=HTYj3eKK60M
+або
+https://youtu.be/HTYj3eKK60M
+або
+https://youtu.be/HTYj3eKK60M?si=xoY-F9CrDLSy46Ly__
