@@ -172,7 +172,7 @@ class Main:
 інш. або Літера: Вихід;
 """
         )
-        self.console.print(f"[green]Введіть потрібний варіант: ", end="")
+        self.console.print("[green]Введіть потрібний варіант: ", end="")
         try:
             self.mode = int(input("") or 7)
         except ValueError:
