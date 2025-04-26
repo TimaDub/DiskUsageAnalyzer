@@ -52,10 +52,8 @@ class DiskAnalyzer:
                         )
                     except OSError:
                         continue
-            case "Darwin":
-                os.system(
-                    'osascript -e \'display dialog "Windows and Linux only" with title "Dmytriy sad" buttons {"OK"}\''
-                )
+            case _:
+                raise Exception("System not supported !")
         return self.disks
 
     @staticmethod
